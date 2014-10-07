@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="14A261i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="J1g-pg-YZI">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="8XN-Jj-zk3">
+            <objects>
+                <viewController id="Gh1-Tm-Pyz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HRJ-vn-jZ9"/>
+                        <viewControllerLayoutGuide type="bottom" id="G5u-Og-SkL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1AQ-XF-sAY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="byF-Ih-dt7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2sG-uV-Ofw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42" y="742"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="aHw-sR-YH2">
+            <objects>
+                <tabBarController id="J1g-pg-YZI" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="g96-zw-r2m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Gh1-Tm-Pyz" kind="relationship" relationship="viewControllers" id="zuW-eE-fJd"/>
+                        <segue destination="3p1-uc-hcQ" kind="relationship" relationship="viewControllers" id="oYo-Sv-JGC"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FQn-P2-jwA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-519" y="291"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="1NH-Fj-21D">
+            <objects>
+                <viewController id="3p1-uc-hcQ" customClass="IncioViewController" customModule="Swiftapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pU4-tj-yoj"/>
+                        <viewControllerLayoutGuide type="bottom" id="28c-9t-rCJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7BQ-Lq-s1g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="djg-vz-Plm">
+                                <rect key="frame" x="0.0" y="87" width="320" height="481"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAH-OY-psI">
+                                <rect key="frame" x="141" y="31" width="57" height="30"/>
+                                <state key="normal" title="CheckIn">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="al_darle_click:" destination="3p1-uc-hcQ" eventType="touchUpInside" id="g7q-f0-TfG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="A2d-OG-a9p"/>
+                    <connections>
+                        <outlet property="mapa" destination="djg-vz-Plm" id="n7E-M1-Dum"/>
+                        <outlet property="un_simple_boton" destination="JAH-OY-psI" id="rXg-Yt-ggf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bi0-A5-eNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42" y="96"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4">
+            <size key="portraitSize" width="320" height="568"/>
+            <size key="landscapeSize" width="568" height="320"/>
+        </simulatedScreenMetrics>
+    </simulatedMetricsContainer>
+</document>
